@@ -20,6 +20,7 @@ end
 
 gem_group :deployment do
   gem 'pry-rails'
+  gem 'guard-rails'
   gem 'guard-unicorn', '>= 0.1.3'
   gem 'rspec-rails'
   gem 'capybara'
