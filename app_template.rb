@@ -35,7 +35,7 @@ gem_group :deployment do
   gem 'cap-ec2', require: false
 end
 
-%w(.gitignore Capfile Guardfile config/unicorn.rb).each do |f|
+%w(.gitignore Capfile Guardfile config/unicorn.rb config/application.rb).each do |f|
   remove_file f
   get_and_gsub "#{repo_url}/#{f}", f
 end
@@ -43,3 +43,7 @@ end
 # root
 generate :controller, 'home', 'index'
 route "root to: 'home#index'"
+
+# sass
+remove_file 'app/assets/stylesheets/application.css'
+get "#{repo_url}/app/assets/stylesheets/application.scss", 'app/assets/stylesheets/application.scss'
