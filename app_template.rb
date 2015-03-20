@@ -19,7 +19,7 @@ gem_group :assets do
 end
 
 gem_group :deployment do
-  gem 'pry'
+  gem 'pry-rails'
   gem 'guard-unicorn', '>= 0.1.3'
   gem 'rspec-rails'
   gem 'capybara'
@@ -34,6 +34,7 @@ gem_group :deployment do
   gem 'cap-ec2', require: false
 end
 
-%w(.gitignore Capfile Guardfile).each do |f|
-  get "#{repo_url}/#{f}", f
+%w(.gitignore Capfile Guardfile config/unicorn.rb).each do |f|
+  remove_file f
+  get_and_gsub "#{repo_url}/#{f}", f
 end
