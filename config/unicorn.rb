@@ -14,7 +14,7 @@ pid '/tmp/%app_name%_unicorn.pid'
 # logs
 if ENV['RAILS_ENV'] == 'production'
   stderr_path '/var/log/%app_name%/unicorn.log'
-  stdout_path '/var/log/%app_name/unicorn.log'
+  stdout_path '/var/log/%app_name%/unicorn.log'
 else
   stderr_path File.expand_path("../../log/unicorn_#{env}.log", __FILE__)
   stdout_path File.expand_path("../../log/unicorn_#{env}.log", __FILE__)
