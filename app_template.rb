@@ -11,6 +11,7 @@ gem 'haml-rails'
 gem 'dotenv-rails'
 gem 'whenever', require: false
 gem 'mtracker'
+gem 'meta-tags'
 
 gem_group :assets do
   gem 'bourbon'
@@ -47,3 +48,7 @@ route "root to: 'home#index'"
 # sass
 remove_file 'app/assets/stylesheets/application.css'
 get "#{repo_url}/app/assets/stylesheets/application.scss", 'app/assets/stylesheets/application.scss'
+
+# layout
+remove_file 'app/views/layouts/application.html.erb'
+get "#{repo_url}/app/views/layouts/application.html.haml", 'app/views/layouts/application.html.haml'
