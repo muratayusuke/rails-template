@@ -1,4 +1,4 @@
-repo_url = 'https://raw.github.com/muratayusuke/rails_template/master'
+repo_url = 'https://raw.github.com/muratayusuke/rails-template/master'
 @app_name = app_name
 
 def get_and_gsub(source_path, local_path)
