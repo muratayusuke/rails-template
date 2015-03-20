@@ -12,6 +12,7 @@ gem 'dotenv-rails'
 gem 'whenever', require: false
 gem 'mtracker'
 gem 'meta-tags'
+gem 'unicorn-rails'
 
 gem_group :assets do
   gem 'bourbon'
