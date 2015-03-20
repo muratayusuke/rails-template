@@ -39,3 +39,7 @@ end
   remove_file f
   get_and_gsub "#{repo_url}/#{f}", f
 end
+
+# root
+generate :controller, 'home', 'index'
+route "root to: 'home#index'"
