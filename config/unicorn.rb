@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 
-if ENV['RAILS_ENV'] == 'production'
+env = ENV['RAILS_ENV']
+
+if env == 'production'
   worker_processes 8
 else
   worker_processes 2
@@ -12,7 +14,7 @@ listen '/tmp/%app_name%_unicorn.sock'
 pid '/tmp/%app_name%_unicorn.pid'
 
 # logs
-if ENV['RAILS_ENV'] == 'production'
+if env == 'production'
   stderr_path '/var/log/%app_name%/unicorn.log'
   stdout_path '/var/log/%app_name%/unicorn.log'
 else
