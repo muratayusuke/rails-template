@@ -35,5 +35,7 @@ module Gupppy
     config.assets.paths << `bundle show bourbon`.strip + '/app/assets/stylesheets/'
     config.assets.paths << `bundle show neat`.strip + '/app/assets/stylesheets/'
     config.assets.paths << `bundle show bitters`.strip + '/app/assets/stylesheets/'
+
+    config.logger = Logger.new($stdout)
   end
 end
