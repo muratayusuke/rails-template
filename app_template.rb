@@ -32,6 +32,7 @@ gem_group :development, :test do
   gem 'rubocop'
   gem 'rails_best_practices'
   gem 'bullet'
+  gem 'quiet_assets'
 end
 
 gem_group :deployment do
