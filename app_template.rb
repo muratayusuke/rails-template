@@ -20,7 +20,8 @@ gem_group :assets do
   gem 'bitters'
 end
 
-gem_group :deployment do
+gem_group :development, :test do
+  gem 'awesome_print'
   gem 'pry-rails'
   gem 'guard-rails'
   gem 'guard-unicorn', '>= 0.1.3'
@@ -31,6 +32,9 @@ gem_group :deployment do
   gem 'rubocop'
   gem 'rails_best_practices'
   gem 'bullet'
+end
+
+gem_group :deployment do
   gem 'capistrano-rails', require: false
   gem 'capistrano-rbenv', require: false
   gem 'capistrano3-unicorn', require: false
