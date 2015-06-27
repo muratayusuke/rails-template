@@ -49,6 +49,10 @@ end
   get_and_gsub "#{repo_url}/#{f}", f
 end
 
+inside @app_name do
+  run 'bundle install'
+end
+
 # root
 generate :controller, 'home', 'index'
 route "root to: 'home#index'"
