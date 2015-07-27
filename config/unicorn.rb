@@ -32,7 +32,9 @@ before_fork do |server, _worker|
     begin
       Process.kill :QUIT, File.read(old_pid).to_i
     rescue Errno::ENOENT, Errno::ESRCH
-      logger.error $ERROR_INFO
+      # rubocop:disable all
+      p $ERROR_INFO
+      # rubocop:enable all
     end
   end
 end
