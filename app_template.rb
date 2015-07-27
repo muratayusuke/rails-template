@@ -44,7 +44,7 @@ gem_group :deployment do
   gem 'cap-ec2', require: false
 end
 
-%w(.gitignore Capfile Guardfile config/unicorn.rb config/application.rb config/locales/ja.yml .rubocop.yml).each do |f|
+%w(.gitignore Capfile Guardfile Rakefile lib/tasks/rubocop.rake config/unicorn.rb config/application.rb config/locales/ja.yml .rubocop.yml).each do |f|
   remove_file f
   get_and_gsub "#{repo_url}/#{f}", f
 end
